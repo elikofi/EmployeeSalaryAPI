@@ -6,8 +6,8 @@ namespace SalaryCalculator.Calculations
     /// Pass in the amount before tax to calculate the basic salary
     /// </summary>
     /// <param name="amountBeforeTax">Amount before tax is the net salary plus the paye tax</param>
-    /// <returns>Salary after employee pension contribution has been added. So we subtract amount before tax from this to get the employee pension contribution.</returns>
-        public static double ReversedBasicSalaryAfterEmployeePensionContribution(double amountBeforeTax)
+    /// <returns>Salary after employee pension contribution has been added. So we subtract amount after paye tax from this to get the employee pension contribution.</returns>
+        public static double BasicSalaryCalculatingEmployeePensionContribution(double amount)
         {
             //dividing the amount before tax by the percentage left after the employee tax from tier 2 and 3.
             //tax for tier 2 is 5.5% added to tier 3 tax(5%) making a total of 10.5%
@@ -20,7 +20,7 @@ namespace SalaryCalculator.Calculations
 
             double percentageAfterDeduction = 1 - totalEmployeeTiers;
 
-            var ReversedBasicSalary = amountBeforeTax / percentageAfterDeduction;
+            var ReversedBasicSalary = amount / percentageAfterDeduction;
 
             return ReversedBasicSalary;
         }

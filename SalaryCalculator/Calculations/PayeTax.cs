@@ -7,10 +7,10 @@ namespace SalaryCalculator.Calculations
      /// </summary>
      /// <param name="taxableIncome"></param>
      /// <returns></returns>
-        public static double ReversePayeTax(double taxableIncome)
+        public static double CumulativePayeTaxAmount(double taxableIncome)
         {
             //assigning incoming taxable income to a new variable for the calculations.
-            double cumulativeTax = taxableIncome;
+            double cumulativeAmount = taxableIncome;
 
             //this is in percentage.
             double[] taxRates = { 30, 25, 17.5, 10, 5, 0 };
@@ -21,7 +21,7 @@ namespace SalaryCalculator.Calculations
 
             for (int i = 0; i < taxRates.Length; i++)
             {
-                var amountBeforeTax = (100 * cumulativeTax) / (100 + taxRates[i]);
+                var amountBeforeTax = (100 * cumulativeAmount) / (100 + taxRates[i]);
 
                 if (amountBeforeTax - chargeableIncome[i] < 0)
                 {
@@ -29,11 +29,11 @@ namespace SalaryCalculator.Calculations
                 }
                 else
                 {
-                    cumulativeTax += (cumulativeTax - amountBeforeTax);
+                    cumulativeAmount += (cumulativeAmount - amountBeforeTax);
                 }
             }
 
-            return cumulativeTax;
+            return cumulativeAmount;
         }
 
     }

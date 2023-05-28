@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaryCalculator", "SalaryC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaryControllerTest", "SalaryControllerTest\SalaryControllerTest.csproj", "{1E807BB4-9500-47D0-908A-452FAFB2E2C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaryCalculatorTest", "SalaryCalculatorTest\SalaryCalculatorTest.csproj", "{54ED6D52-98CA-4B61-A557-AE1076A55F4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1E807BB4-9500-47D0-908A-452FAFB2E2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E807BB4-9500-47D0-908A-452FAFB2E2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E807BB4-9500-47D0-908A-452FAFB2E2C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54ED6D52-98CA-4B61-A557-AE1076A55F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54ED6D52-98CA-4B61-A557-AE1076A55F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54ED6D52-98CA-4B61-A557-AE1076A55F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54ED6D52-98CA-4B61-A557-AE1076A55F4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Runtime.Intrinsics.Arm;
 using System.Threading.Tasks;
@@ -19,17 +18,17 @@ namespace SalaryCalculator.Calculations.Controllers
         [HttpPost]
         public IActionResult CalculateSalary(SalaryRequest request)
         {
-            double amountBeforeTax = PayeTax.ReversePayeTax(request.NetSalary);
+            double amountBeforePensionTaxes = PayeTax.CumulativePayeTaxAmount(request.NetSalary);
 
-            var amountAfterTax = amountBeforeTax - request.Allowances < 0? 0: amountBeforeTax - request.Allowances;
-            double bothEPCandAAT = EmployeePension.ReversedBasicSalaryAfterEmployeePensionContribution(amountAfterTax); //
+            var amountAfterTax = amountBeforePensionTaxes - request.Allowances < 0? 0: amountBeforePensionTaxes - request.Allowances;
+            double bothEPCandAAT = EmployeePension.BasicSalaryCalculatingEmployeePensionContribution(amountAfterTax);
 
             var results = new SalaryResult();
             results.GrossSalary = Math.Round(amountAfterTax + request.Allowances, 2);
             results.EmployeePensionContribution = Math.Round(bothEPCandAAT - amountAfterTax, 2);
 
-            results.PAYETax = Math.Round(amountBeforeTax - request.NetSalary, 2);
-            results.EmployerPensionContribution = Math.Round(EmployerPension.ReversedBasicSalaryAfterEmployerPensionContribution(bothEPCandAAT - amountAfterTax), 2);
+            results.PAYETax = Math.Round(amountBeforePensionTaxes - request.NetSalary, 2);
+            results.EmployerPensionContribution = Math.Round(EmployerPension.BasicSalaryCalculatingEmployerPensionContribution(bothEPCandAAT - amountAfterTax), 2);
 
             
 
