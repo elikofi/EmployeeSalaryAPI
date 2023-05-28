@@ -8,7 +8,7 @@ public class SalaryCalculatorTest
     [Fact]
     public double Amount_After_Calculating_EmployeePension_Should_Be_Greater_Than_Amount_Before()
     {
-        double amountBefore = EmployeePension.BasicSalaryCalculatingEmployeePensionContribution(amount: 2000);
+        double amountBefore = EmployeePension.AmountCalculatingEmployeePensionContribution(amountAfterTax: 2000);
 
         const double Tier2 = 0.055; 
         const double Tier3 = 0.05;  
@@ -24,7 +24,7 @@ public class SalaryCalculatorTest
     [Fact]
     public double Amount_After_Calculating_EmployerPension_Should_Be_Greater_Than_Amount_Before()
     {
-        double amountBefore = EmployerPension.BasicSalaryCalculatingEmployerPensionContribution(amount: 2000);
+        double amountBefore = EmployerPension.EmployerPensionContribution(amount: 2000);
 
         const double Tier1 = 0.13;
         const double Tier3 = 0.05;
@@ -63,7 +63,6 @@ public class SalaryCalculatorTest
                 cumulativeAmount += (cumulativeAmount - amountBeforeTax);
             }
         }
-
         return cumulativeAmount;
     }
 

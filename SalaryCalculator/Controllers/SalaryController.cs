@@ -21,14 +21,15 @@ namespace SalaryCalculator.Calculations.Controllers
             double amountBeforePensionTaxes = PayeTax.CumulativePayeTaxAmount(request.NetSalary);
 
             var amountAfterTax = amountBeforePensionTaxes - request.Allowances < 0? 0: amountBeforePensionTaxes - request.Allowances;
-            double bothEPCandAAT = EmployeePension.BasicSalaryCalculatingEmployeePensionContribution(amountAfterTax);
+            double employeePensionPlusAmountAfterTax = EmployeePension.AmountCalculatingEmployeePensionContribution(amountAfterTax);
 
-            var results = new SalaryResult();
+            var results = new SalaryResult();   
             results.GrossSalary = Math.Round(amountAfterTax + request.Allowances, 2);
-            results.EmployeePensionContribution = Math.Round(bothEPCandAAT - amountAfterTax, 2);
+            results.EmployeePensionContribution = Math.Round(employeePensionPlusAmountAfterTax - amountAfterTax, 2);
 
-            results.PAYETax = Math.Round(amountBeforePensionTaxes - request.NetSalary, 2);
-            results.EmployerPensionContribution = Math.Round(EmployerPension.BasicSalaryCalculatingEmployerPensionContribution(bothEPCandAAT - amountAfterTax), 2);
+            results.PAYETax = Math.Round(amountBeforePensionTaxes - request.NetSalary, 2); 
+
+            results.EmployerPensionContribution = Math.Round(EmployerPension.EmployerPensionContribution(employeePensionPlusAmountAfterTax - amountAfterTax), 2);
 
             
 

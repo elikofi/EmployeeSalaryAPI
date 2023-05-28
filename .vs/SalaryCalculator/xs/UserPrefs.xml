@@ -1,17 +1,12 @@
 ﻿<Properties StartupConfiguration="{37BE42C7-ABE8-4F5A-A78F-E179810BCE6F}|https" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.SalaryCalculator PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SalaryCalculatorTest/SalaryCalculatorTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SalaryCalculator/Controllers/SalaryController.cs">
     <Files>
-      <File FileName="SalaryCalculator/Calculations/EmployeePension.cs" />
-      <File FileName="SalaryCalculator/Calculations/EmployerPension.cs" />
-      <File FileName="SalaryCalculator/Calculations/PayeTax.cs" />
-      <File FileName="SalaryCalculator/Controllers/SalaryController.cs" />
-      <File FileName="SalaryCalculatorTest/SalaryCalculatorTest.cs" Line="26" Column="28" />
+      <File FileName="SalaryCalculator/Calculations/PayeTax.cs" Line="37" Column="10" />
+      <File FileName="SalaryCalculator/Controllers/SalaryController.cs" Line="5" Column="30" />
+      <File FileName="SalaryCalculator/Models/SalaryResult.cs" Line="11" Column="1" />
+      <File FileName="SalaryCalculatorTest/SalaryCalculatorTest.cs" Line="4" Column="32" />
+      <File FileName="SalaryCalculator/Calculations/EmployerPension.cs" Line="25" Column="42" NotebookId="1" />
+      <File FileName="SalaryCalculator/Calculations/EmployeePension.cs" Line="28" Column="2" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,15 +14,36 @@
           <Node name="SalaryCalculator" expanded="True">
             <Node name="SalaryCalculator" expanded="True">
               <Node name="Calculations" expanded="True" />
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="SalaryController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
             </Node>
+            <Node name="SalaryCalculatorTest" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="SalaryCalculator" expanded="True">
             <Node name="SalaryCalculatorTest" expanded="True">
-              <Node name="SalaryCalculatorTest.cs" selected="True" />
+              <Node name="SalaryCalculatorTest" expanded="True">
+                <Node name="SalaryCalculatorTest" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.SalaryCalculator PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/elijahamoako/Desktop/SalaryCalculator/SalaryCalculator/Calculations/EmployeePension.cs" relfile="SalaryCalculator/Calculations/EmployeePension.cs" line="11" column="1" />
+      <Breakpoint file="/Users/elijahamoako/Desktop/SalaryCalculator/SalaryCalculator/Controllers/SalaryController.cs" relfile="SalaryCalculator/Controllers/SalaryController.cs" line="16" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
