@@ -3,9 +3,7 @@
 
 #### Post all items
 
-```http
-  Requests made by client
-```
+ Requests made by client
 
 | Property | Type     | Description                |
 | :-------- | :------- | :------------------------- |
@@ -14,9 +12,7 @@
 
 #### Get items
 
-```http
-  Get all results and return them to client
-```
+ Get all results and return them to client
 
 | Property | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
