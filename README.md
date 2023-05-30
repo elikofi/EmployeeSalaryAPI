@@ -1,9 +1,30 @@
 
+# README.md
+
+A tax calculation system in which an employee can input their net salary and allowances and then the system generates or calculates the corresponding gross salary, paye tax, employee pension tiers contribution, employer pension tier contribution and the basic salary of the employee.
+
+
+## Tech Stack
+
+**Client:** Swagger Ui
+
+**Server:** .NET Core
+
+
+## Features
+
+- Cross platform
+
+
+## Input Parameters
+The api has two input parameters which are the net salary of the employee and the allowances of the the employee.
+
 ## API Reference
 
 #### Post all items
 
- Requests made by client
+  Requests made by client
+
 
 | Property | Type     | Description                |
 | :-------- | :------- | :------------------------- |
@@ -12,7 +33,8 @@
 
 #### Get items
 
- Get all results and return them to client
+
+Get all results and return them to client
 
 | Property | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
